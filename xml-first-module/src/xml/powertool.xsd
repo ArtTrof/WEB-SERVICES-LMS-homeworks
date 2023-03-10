@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="power" type="powerType"/>
+  <xs:complexType name="tcType">
+    <xs:sequence>
+      <xs:element name="power_consumption">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Low"/>
+            <xs:enumeration value="Medium"/>
+            <xs:enumeration value="High"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="productivity">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:enumeration value="120"/>
+            <xs:enumeration value="90"/>
+            <xs:enumeration value="70"/>
+            <xs:enumeration value="180"/>
+            <xs:enumeration value="50"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="autonomy">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Yes"/>
+            <xs:enumeration value="No"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="power_toolType">
+    <xs:sequence>
+      <xs:element name="model">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="DrillMaster 5000"/>
+            <xs:enumeration value="Jigsaw 2000"/>
+            <xs:enumeration value="Angle Grinder Pro"/>
+            <xs:enumeration value="Belt Sander Mini"/>
+            <xs:enumeration value="Rotary Hammer"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="handy">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Single-hand"/>
+            <xs:enumeration value="Double-hand"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="origin">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="China"/>
+            <xs:enumeration value="USA"/>
+            <xs:enumeration value="Germany"/>
+            <xs:enumeration value="Japan"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="tcType" name="tc"/>
+      <xs:element name="material">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Plastic"/>
+            <xs:enumeration value="Metal"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="powerType">
+    <xs:sequence>
+      <xs:element type="power_toolType" name="power_tool" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
