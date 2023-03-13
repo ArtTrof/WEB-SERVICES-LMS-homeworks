@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<shop>
+    <candy id="1">
+        <name>bee</name>
+        <price kilograms="1">100</price>
+    </candy>
+    <candy id="2">
+        <name>ra4ok</name>
+        <price kilograms="1">50</price>
+    </candy>
+</shop>

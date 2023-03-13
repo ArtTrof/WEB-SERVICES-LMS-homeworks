@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><books>
+    <book id="01" isbn="12345">
+        <title>Childshood's End</title>
+        <author>Artur Clerk</author>
+    </book>
+    <book id="02" isbn="67890">
+        <title>The Merchant Of Vanice</title>
+        <author>William Shakespeare</author>
+    </book>
+    <book id="03" isbn="12222">
+        <title>Coves of the street</title>
+        <author>Isaac</author>
+    </book>
+    <book id="04" isbn="10000">
+        <title>Lukomore</title>
+        <author>Pushkin</author>
+    </book>
+<book id="05" isbn="777">
+    <title>Zapovit</title>
+    <author>Taras Shevchenko</author>
+</book>
+</books>
