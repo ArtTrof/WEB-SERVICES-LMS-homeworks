@@ -77,14 +77,12 @@ public class SAX extends DefaultHandler {
         SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
         SAXParser saxParser = saxParserFactory.newSAXParser();
         SAX sax = new SAX();
-        String path = String.join(File.separator, "src","task2", "books.xml");
+        String path = String.join(File.separator, "src", "task2", "books.xml");
         File file = new File(path);
-
-
-        if (file.exists()){
-            saxParser.parse(file,sax);
-             return sax.getBooks();
-        }else
+        if (file.exists()) {
+            saxParser.parse(file, sax);
+            return sax.getBooks();
+        } else
             throw new RuntimeException();
     }
 }
